@@ -13,24 +13,24 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`startTransaction(...)`](#starttransaction)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### startTransaction(...)
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+startTransaction(options: { orderId: string; mid: string; txnToken: string; amount: string; callbackUrl: string; isStaging: boolean; restrictAppInvoke: boolean; }) => Promise<any>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+| Param         | Type                                                                                                                                                  |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`options`** | <code>{ orderId: string; mid: string; txnToken: string; amount: string; callbackUrl: string; isStaging: boolean; restrictAppInvoke: boolean; }</code> |
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+**Returns:** <code>Promise&lt;any&gt;</code>
 
 --------------------
 

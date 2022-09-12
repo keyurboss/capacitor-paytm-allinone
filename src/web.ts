@@ -6,8 +6,16 @@ export class CapacitorPaytmAllinOneWeb
   extends WebPlugin
   implements CapacitorPaytmAllinOnePlugin
 {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  startTransaction(options: {
+    orderId: string;
+    mid: string;
+    txnToken: string;
+    amount: string;
+    callbackUrl: string;
+    isStaging: boolean;
+    restrictAppInvoke: boolean;
+  }): Promise<any> {
+    console.log('Txn', options);
+    throw new Error('Method not implemented.');
   }
 }

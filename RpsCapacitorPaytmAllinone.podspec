@@ -14,4 +14,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target  = '13.0'
   s.dependency 'Capacitor'
   s.swift_version = '5.1'
+  s.preserve_paths = 'ios/AppInvokeSDK.framework'
+  s.xcconfig = { 'OTHER_LDFLAGS' => '-framework AppInvokeSDK' }
+  s.vendored_frameworks = 'ios/AppInvokeSDK.framework'
+  s.static_framework = true
+
 end
