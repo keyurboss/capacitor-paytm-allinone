@@ -1,18 +1,30 @@
 package net.rpsoftech.capacitorpaytm;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
+
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
+import com.getcapacitor.annotation.ActivityCallback;
 import com.getcapacitor.annotation.CapacitorPlugin;
+import com.paytm.pgsdk.PaytmOrder;
+import com.paytm.pgsdk.PaytmPaymentTransactionCallback;
+import com.paytm.pgsdk.TransactionManager;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 @CapacitorPlugin(name = "CapacitorPaytmAllinOne")
 public class CapacitorPaytmAllinOnePlugin extends Plugin {
 protected static final int REQ_CODE = 20011;
 
-    private static AllInOneSDK INSTANCE = null;
+    private static CapacitorPaytmAllinOnePlugin INSTANCE = null;
 
-    public static AllInOneSDK getInstance() {
+    public static CapacitorPaytmAllinOnePlugin getInstance() {
         return INSTANCE;
     }
 
@@ -127,7 +139,7 @@ protected static final int REQ_CODE = 20011;
         transactionManager.startTransaction(getActivity(), REQ_CODE);
     }
 
-    public void onActivityResult(int requestCode, Intent data) {
+    public void onActivityResult(int requestCode,Intent data) {
         if (requestCode == REQ_CODE  && data != null) {
             onRequestCallback(data);
         }

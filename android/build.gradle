@@ -19,7 +19,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion project.hasProperty('compileSdkVersion') ? rootProject.ext.compileSdkVersion : 32
-    paytmAllinOneAndroid project.hasProperty('paytmAllinOneAndroid') ? rootProject.ext.paytmAllinOneAndroid :'1.6.11'
+  //  paytmAllinOneAndroid project.hasProperty('paytmAllinOneAndroid') ? rootProject.ext.paytmAllinOneAndroid :'1.6.11'
     defaultConfig {
         minSdkVersion project.hasProperty('minSdkVersion') ? rootProject.ext.minSdkVersion : 22
         targetSdkVersion project.hasProperty('targetSdkVersion') ? rootProject.ext.targetSdkVersion : 32
@@ -55,7 +55,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':capacitor-android')
     implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
-    implementation "com.paytm.appinvokesdk:appinvokesdk:$paytmAllinOneAndroid"
+    implementation "com.paytm.appinvokesdk:appinvokesdk:1.6.11"
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
