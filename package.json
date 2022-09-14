@@ -1,6 +1,6 @@
 {
   "name": "@rps/capacitor-paytm-allinone",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "Paytm All in one plugin for capacitor",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -19,8 +19,11 @@
     "type": "git",
     "url": "git+https://github.com/rpsoftech/capacitor-paytm-allinone.git.git"
   },
+  "publishConfig": {
+    "registry": "https://npmjs.rpso.in"
+  },
   "bugs": {
-    "url": "https://github.com/rpsoftech/capacitor-paytm-allinone.git/issues"
+    "url": "https://github.com/rpsoftech/capacitor-paytm-allinone/issues"
   },
   "keywords": [
     "capacitor",

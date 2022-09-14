@@ -1,0 +1,7 @@
+src
+node_modules
+README.md
+tsconfig.json
+rollup.config.js
+.eslintignore
+.gitignore
